@@ -1,27 +1,33 @@
 # Quality Excellence through Agentic AI
 
-## Overview
+A small Python prototype exploring a rule-based quality-monitoring workflow. It evaluates quality metrics against thresholds and generates simple follow-up recommendations.
 
-A project concept focused on applying agent-based AI workflows to software quality activities, including quality monitoring, compliance checks, root-cause analysis, and recommendations.
+## Current implementation
 
-## Intended use cases
+- `QualityMetric` stores a metric name, value, and threshold.
+- `MonitoringAgent` flags metrics whose values fall below their thresholds.
+- `RecommendationAgent` produces a text recommendation for each alert.
+- `app.py` includes a sample run with illustrative metric values.
+- `test_app.py` contains unit tests for alert detection and recommendation generation.
 
-- Consolidate quality signals for review.
-- Help identify recurring issues and potential root causes.
-- Support compliance checks against defined criteria.
-- Present recommendations for human review.
+Despite the project name, the current code is a basic rule-based prototype; it does not yet implement autonomous AI agents, integrations, compliance engines, or root-cause analysis.
 
-## Scope and status
+## Run
 
-The current repository description identifies these intended capabilities but does not provide enough documented implementation detail to confirm which features are working. This README therefore describes the project direction, not a claim that an operational AI platform or production workflow is available.
+Requires Python 3.10 or later. No third-party packages are needed for the current prototype.
 
-## What should be documented next
+```bash
+python app.py
+python -m unittest discover -v
+```
 
-- Problem statement and target users.
-- System architecture and agent responsibilities.
-- Input data, evaluation criteria, and expected outputs.
-- Frameworks, dependencies, and setup instructions.
-- A small end-to-end example with sample data.
-- Tests and evaluation results, including known limitations.
+## Continuous integration
 
-Do not use confidential customer data or production quality records in demonstrations without appropriate authorization and safeguards.
+GitHub Actions runs the unit tests on pushes and pull requests targeting `main`.
+
+## Next steps
+
+- Define metric sources and data validation.
+- Separate rules from reporting.
+- Add tests for missing, invalid, and boundary values.
+- Document any future AI or external-service integrations only after implementation.
