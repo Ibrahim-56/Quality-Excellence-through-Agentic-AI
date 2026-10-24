@@ -1,3 +1,5 @@
+[![CI](https://github.com/Ibrahim-56/Quality-Excellence-through-Agentic-AI/actions/workflows/tests.yml/badge.svg)](https://github.com/Ibrahim-56/Quality-Excellence-through-Agentic-AI/actions/workflows/tests.yml)
+
 # Quality Excellence through Agentic AI
 
 A small Python prototype exploring a rule-based quality-monitoring workflow. It evaluates quality metrics against thresholds and generates simple follow-up recommendations.
